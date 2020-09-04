@@ -76,10 +76,6 @@ body {
     width: auto;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    text-align: space-between;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .cardpadre {
@@ -91,6 +87,13 @@ p {
     text-align: center;
     width: 100%;
 }
+
+.textcardtrabajos {
+    text-align: left;
+    width: 100%;
+}
+
+
 
 .footer {
     background-color: #00487f;
