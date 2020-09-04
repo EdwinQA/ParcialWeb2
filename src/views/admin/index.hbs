@@ -1,0 +1,86 @@
+{{> navegacion}}
+
+<div class="col-md-12 ">
+    <div class="card">
+        <div class="card-header">
+            <h1>Proyectos Realizados de {{user}}</h1>
+        </div>
+        <div class="card-body">
+            {{#if proyectos}}
+            <ul class="list-group">
+                {{#each proyectos}}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                     {{id}} <b>Nombre</b> : {{nombre}} <b>Descripncion</b>: {{descripcion}} 
+                    <a href="/eliminar_proyecto?idproyecto={{id}}" class="btn btn-danger">Eliminar</a>
+                    <a href="/modificar_proyecto?user={{fk_usuario}}&idproyecto={{id}}" class="btn btn-danger">Modificar</a>
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+                <p>No hay proyectos realizados.</p>
+            {{/if}}
+        </div>
+        <div class="card-footer">
+            <form action="/nuevo_proyecto?user={{user}}&idproyecto={{idproyecto}}" method="POST">
+              {{#if idproyecto}}
+              <p>Se va a modificar el proyecto : {{idproyecto}}</p>
+               {{/if}}
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Nombre del proyecto" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="descripcion" placeholder="Descripción" class="form-control">
+                </div>
+    
+                <button class="btn btn-primary btn-block">
+                    Agregar Proyecto
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5"></div>
+
+<div class="col-md-12 ">
+    <div class="card">
+        <div class="card-header">
+            <h1>Trabajos desempeñados por {{user}}</h1>
+        </div>
+        <div class="card-body">
+            {{#if trabajos}}
+            <ul class="list-group">
+                {{#each trabajos}}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{id}} <b>Empresa</b> : {{empresa}} <b>Cargo</b>: {{cargo}}  <b>Funcion</b>: {{descripcion}} 
+                    <a href="/eliminar_trabajo?idtrabajo={{id}}" class="btn btn-danger">Eliminar</a>
+                    <a href="/modificar_trabajo?user={{fk_usuario}}&idtrabajo={{id}}" class="btn btn-danger">Modificar</a>
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+                <p>No hay Trabajos realizados.</p>
+            {{/if}}
+        </div>
+        <div class="card-footer">
+            <form action="/nuevo_trabajo?user={{user}}&idtrabajo={{idtrabajo}}" method="POST">
+              {{#if idtrabajo}}
+              <p>Se va a modificar el trabajo : {{idtrabajo}}</p>
+               {{/if}}
+                <div class="form-group">
+                    <input type="text" name="empresa" placeholder="Empresa donde trabajo" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="cargo" placeholder="Cargo Asignado" class="form-control">
+                </div>
+                 <div class="form-group">
+                    <input type="text" name="descripcion" placeholder="Descripción" class="form-control">
+                </div>
+    
+                <button class="btn btn-primary btn-block">
+                    Agregar Trabajo
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

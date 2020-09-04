@@ -1,0 +1,106 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.padre {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.rounded-circle {
+    margin-top: 66px;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+}
+
+.container_superior {
+    height: 100px;
+    width: 60%;
+    background-color: #90c59a;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container_central {
+    background-color: #eeeeee;
+    display: flex;
+    height: 100%;
+    width: 60%;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+    z-index: -2;
+}
+
+.modal-body {
+    height: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-align: space-between;
+    margin-bottom: 40px;
+}
+
+.container_proyectos {
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-align: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container_trabajos {
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-align: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.cardpadre {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align: center;
+    width: 100%;
+}
+
+.footer {
+    background-color: #00487f;
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    height: auto;
+    color: white;
+    margin-left: 20%;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

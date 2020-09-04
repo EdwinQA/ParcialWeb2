@@ -1,0 +1,21 @@
+{
+  "name": "ejerciciop2",
+  "version": "1.0.0",
+  "description": "Parcial 2 de web con node js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "startdev": "nodemon src/index.js"
+  },
+  "author": "Edwin Stiven Quebrada Antury",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "firebase": "^7.19.1",
+    "firebase-admin": "^9.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
